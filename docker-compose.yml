@@ -1,38 +1,20 @@
-version: '3'
+version: "3"
 services:
-  webapp:
-    build:
-      context: ./
-      dockerfile: Dockerfile
-    container_name: "webapp"
-    image: node:latest
-    networks:
-      vpcbr:
-        ipv4_address: 10.6.0.8
-    ports:
-      - "3000:3000"
-    links:
-      - mongodb
-    depends_on:
-      - mongodb
-  mongodb:
-    image: mongo:latest
+  db:
+    image: mongo
     container_name: "mongodb"
     environment:
       - MONGO_DATA_DIR=/data/db
       - MONGO_LOG_DIR=/dev/null
     volumes:
       - ./data/db:/data/db
-    networks:
-      vpcbr:
-        ipv4_address: 10.6.0.9
     ports:
-      - 27017:27017
-    command: mongod # --quiet
-
-networks:
-  vpcbr:
-    driver: bridge
-    ipam:
-     config:
-       - subnet: 10.6.0.0/16
+      - "27017:27017"
+    command: mongod --smallfiles --logpath=/dev/null
+  webapp:
+    container_name: "webapp"
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"

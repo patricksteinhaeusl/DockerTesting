@@ -15,7 +15,7 @@ const config = {
   mongo: {
     //username: 'emil_admin',
     //password: 'password1234',
-    host: '10.6.0.9',
+    host: '127.0.0.1',
     port: 27017,
     name:'webshop',
     connectionString: function() {

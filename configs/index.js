@@ -19,7 +19,8 @@ const config = {
     port: 27017,
     name:'webshop',
     connectionString: function() {
-      return 'mongodb://' + this.host + ':' + this.port + '/' + this.name;
+      return 'mongodb://mongo/webshop';
+      //return 'mongodb://' + this.host + ':' + this.port + '/' + this.name;
     }
   },
   jwt: {

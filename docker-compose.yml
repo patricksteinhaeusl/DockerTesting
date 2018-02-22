@@ -6,8 +6,12 @@ services:
       - "3000:3000"
     build: ./
     links:
-      - database
+      - mongo
     depends_on:
-      - database
-  database:
-      image: mongo
+      - mongo
+  mongo:
+    image: mongo
+    volumes:
+          - /data/mongodb/db:/data/db
+    ports:
+      - "27017:27017"

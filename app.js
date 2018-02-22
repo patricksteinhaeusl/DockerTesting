@@ -1,7 +1,7 @@
 'use strict';
 
 const express = require('express');
-const cors = require('cors');
+//const cors = require('cors');
 const logger = require('morgan');
 const bodyParser = require('body-parser');
 const expressJwt = require('express-jwt');
@@ -21,7 +21,7 @@ const retailer = require('./routes/retailer');
 
 const app = express();
 
-app.use(cors(GlobalConfig.cors.corsOptions));
+//app.use(cors(GlobalConfig.cors.corsOptions));
 
 app.use(logger('dev'));
 app.use(bodyParser.json({'strict': true}));

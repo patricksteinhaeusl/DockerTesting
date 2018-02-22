@@ -28,7 +28,7 @@ services:
         ipv4_address: 10.6.0.9
     ports:
       - 27017:27017
-    command: mongod --smallfiles --logpath=/dev/null # --quiet
+    command: mongod # --quiet
 
 networks:
   vpcbr:

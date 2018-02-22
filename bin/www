@@ -29,7 +29,7 @@ const server = http.createServer(app);
 
 server.listen(port, host, function() {
   let address = server.address();
-  console.log('Server started: http://' + host + ':' + port);
+  console.log('Server started: http://' + address.address + ':' + address.port);
 });
 
 server.on('error', onError);

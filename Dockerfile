@@ -14,6 +14,6 @@ RUN apk add git
 # Clone git repo
 WORKDIR /home/node/
 RUN git clone https://github.com/patricksteinhaeusl/DockerTesting.git
-WORKDIR /home/node/Bachelorarbeit/
+WORKDIR /home/node/DockerTesting/
 
 RUN npm start

@@ -1,20 +1,20 @@
 version: "3"
 services:
-  db:
-    image: mongo
+  mongodb:
+    image: "mongo"
     container_name: "mongodb"
     environment:
-      - MONGO_DATA_DIR=/data/db
-      - MONGO_LOG_DIR=/dev/null
+      - "MONGO_DATA_DIR=/data/db"
+      - "MONGO_LOG_DIR=/dev/null"
     volumes:
-      - ./data/db:/data/db
+      - "./data/db:/data/db"
     ports:
       - "27017:27017"
     command: mongod --smallfiles --logpath=/dev/null
   webapp:
     container_name: "webapp"
     build:
-      context: ./
-      dockerfile: Dockerfile
+      context: "./"
+      dockerfile: "Dockerfile"
     ports:
       - "3000:3000"

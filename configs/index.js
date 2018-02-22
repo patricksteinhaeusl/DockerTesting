@@ -17,7 +17,7 @@ const config = {
     port: 27017,
     name:'webapp',
     connectionString: function() {
-      return 'mongodb://db/webapp';
+      return 'mongodb://172.17.0.1:27017/webapp';
       //return 'mongodb://' + this.host + ':' + this.port + '/' + this.name;
     }
   },

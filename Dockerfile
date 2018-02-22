@@ -26,6 +26,8 @@ WORKDIR /home/node/DockerTesting/
 # USER mongodb
 # RUN mongod &
 
+RUN ifconfig
+
 # Start NodeJS
 WORKDIR /home/node/DockerTesting/
 RUN npm start

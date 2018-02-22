@@ -2,25 +2,9 @@ version: "3"
 services:
   app:
     build: .
-    hostname: app
-    environment:
-      - COMPOSE_PROJECT_NAME=app_db
     ports:
-      - 3000
-    networks:
-      - app_net
-    links:
-      - db
+      - "3000:3000"
   db:
     image: mongo
-    hostname: db
-    environment:
-      - COMPOSE_PROJECT_NAME=app_db
     ports:
-      - 27017
-    networks:
-      - app_net
-
-networks:
-  app_net:
-    driver: bridge
+      - "27017:27017"

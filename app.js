@@ -8,7 +8,7 @@ const expressJwt = require('express-jwt');
 const path = require('path');
 
 const GlobalConfig = require('./configs/index');
-const MongoUtil = require('./utils/mongo');
+//const MongoUtil = require('./utils/mongo');
 
 const auth = require('./routes/auth');
 const account = require('./routes/account');

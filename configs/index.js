@@ -5,7 +5,7 @@ let authSecret = '6a5d1f68as189c1asd31c98ad74f$ä¨ü123^01230dfasdklöfj asjfkl
 
 const config = {
   server: {
-    host: 'webapp',
+    host: 'localhost',
     port: '3000'
   },
   crypt: {
@@ -19,8 +19,7 @@ const config = {
     port: 27017,
     name:'webapp',
     connectionString: function() {
-      return 'mongodb://db:27017/webapp';
-      //return 'mongodb://' + this.host + ':' + this.port + '/' + this.name;
+      return 'mongodb://db/webapp';
     }
   },
   jwt: {

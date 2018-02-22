@@ -5,9 +5,9 @@ services:
     ports:
       - "3000:3000"
     links:
-      - mongodb
+      - db
     depends_on:
-      - mongodb
+      - db
   db:
     image: mongo:latest
     volumes:

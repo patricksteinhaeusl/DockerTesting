@@ -17,9 +17,9 @@ const config = {
     //password: 'password1234',
     host: '127.0.0.1',
     port: 27017,
-    name:'webshop',
+    name:'webapp',
     connectionString: function() {
-      return 'mongodb://mongo/webshop';
+      return 'mongodb://mongo/webapp';
       //return 'mongodb://' + this.host + ':' + this.port + '/' + this.name;
     }
   },

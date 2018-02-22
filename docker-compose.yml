@@ -1,15 +1,15 @@
 version: "3"
 services:
   webapp:
+    build: ./
     container_name: "webapp"
     ports:
       - "3000:3000"
-    build: ./
     links:
-      - mongo
+      - "mongodb"
     depends_on:
-      - mongo
-  mongo:
+      - "mongodb"
+  mongodb:
     image: mongo
     volumes:
           - /data/mongodb/db:/data/db

@@ -4,7 +4,6 @@ FROM node:alpine
 
 # Application default port
 EXPOSE 3000
-EXPOSE 27017
 
 # APK Update
 RUN apk update

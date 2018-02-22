@@ -19,7 +19,7 @@ const config = {
     port: 27017,
     name:'webapp',
     connectionString: function() {
-      return 'mongodb://database/webapp';
+      return 'mongodb://localhost/webapp';
     }
   },
   jwt: {

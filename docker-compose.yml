@@ -1,16 +1,14 @@
 version: "3"
 services:
-  web:
+  webapp:
     build: ./
     ports:
       - "3000:3000"
-    links:
-      - db
-    depends_on:
-      - db
-  db:
+  database:
     image: mongo:latest
     volumes:
       - /data/mongodb/db:/data/db
     ports:
       - "27017:27017"
+    depends_on:
+      - webapp

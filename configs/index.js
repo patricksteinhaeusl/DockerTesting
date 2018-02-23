@@ -15,11 +15,11 @@ const config = {
   mongo: {
     //username: 'emil_admin',
     //password: 'password1234',
-    host: '127.0.0.1',
+    host: 'database',
     port: 27017,
-    name:'webapp',
+    name: 'webshop',
     connectionString: function() {
-      return 'mongodb://database/webapp';
+      return 'mongodb://' + this.host + ':' + this.port + '/' + this.name;
     }
   },
   jwt: {

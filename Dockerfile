@@ -8,8 +8,7 @@ EXPOSE 3000
 # APK Update
 RUN apk update
 
-# Install Git / MongoDB
-# RUN apk add git mongodb
+# Install Git
 RUN apk add git
 
 # Clone git repo

@@ -1,8 +1,10 @@
-version: "3"
+version: '3'
 
 services:
   webapp:
     build: ./
+    container_name: nickel-infinite-app
+    hostname: nickel-infinite-webapp
     ports:
       - "3000:3000"
     links:
@@ -11,6 +13,8 @@ services:
       - database
   database:
     image: mongo
+    container_name: nickel-infinite-app
+    hostname: nickel-infinite-database
     volumes:
       - /data/mongodb/db:/data/db
     ports:

@@ -7,7 +7,7 @@ services:
     depends_on:
       - database
   database:
-    image: mongo:latest
+    image: mongo
     volumes:
       - /data/mongodb/db:/data/db
     ports:
